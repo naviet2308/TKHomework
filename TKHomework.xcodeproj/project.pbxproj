@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		406BA4380E6467EE2D9B278B /* Pods_TKHomework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BA828566A1D224D76C48E6 /* Pods_TKHomework.framework */; };
 		5966D22E1D11512E0059F286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D22D1D11512E0059F286 /* AppDelegate.swift */; };
-		5966D2301D11512E0059F286 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D22F1D11512E0059F286 /* ViewController.swift */; };
 		5966D2331D11512E0059F286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5966D2311D11512E0059F286 /* Main.storyboard */; };
 		5966D2351D11512E0059F286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5966D2341D11512E0059F286 /* Assets.xcassets */; };
 		5966D2381D11512E0059F286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5966D2361D11512E0059F286 /* LaunchScreen.storyboard */; };
 		5966D2431D11512E0059F286 /* TKHomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D2421D11512E0059F286 /* TKHomeworkTests.swift */; };
+		5966D2501D1157DC0059F286 /* TKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D24F1D1157DC0059F286 /* TKViewController.swift */; };
+		5966D2521D1157F40059F286 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D2511D1157F40059F286 /* Constants.swift */; };
+		B53D258005277067F504BB48 /* Pods_TKHomeworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A1A56C9A0D4C70C2E035E5 /* Pods_TKHomeworkTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072E2579CDE5CBC539201EF6 /* Pods-TKHomework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKHomework.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKHomework/Pods-TKHomework.release.xcconfig"; sourceTree = "<group>"; };
+		24925D151CCE88A0F2F147DC /* Pods-TKHomeworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKHomeworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKHomeworkTests/Pods-TKHomeworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		5966D22A1D11512E0059F286 /* TKHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5966D22D1D11512E0059F286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5966D22F1D11512E0059F286 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5966D2321D11512E0059F286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5966D2341D11512E0059F286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5966D2371D11512E0059F286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,12 @@
 		5966D23E1D11512E0059F286 /* TKHomeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKHomeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5966D2421D11512E0059F286 /* TKHomeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKHomeworkTests.swift; sourceTree = "<group>"; };
 		5966D2441D11512E0059F286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5966D24F1D1157DC0059F286 /* TKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKViewController.swift; sourceTree = "<group>"; };
+		5966D2511D1157F40059F286 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		69BA828566A1D224D76C48E6 /* Pods_TKHomework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKHomework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78AF436D79A55AA61CB9A4B5 /* Pods-TKHomework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKHomework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKHomework/Pods-TKHomework.debug.xcconfig"; sourceTree = "<group>"; };
+		B6A1A56C9A0D4C70C2E035E5 /* Pods_TKHomeworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKHomeworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BB71B48030BE1D04AA704A /* Pods-TKHomeworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKHomeworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKHomeworkTests/Pods-TKHomeworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				406BA4380E6467EE2D9B278B /* Pods_TKHomework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53D258005277067F504BB48 /* Pods_TKHomeworkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +74,8 @@
 				5966D22C1D11512E0059F286 /* TKHomework */,
 				5966D2411D11512E0059F286 /* TKHomeworkTests */,
 				5966D22B1D11512E0059F286 /* Products */,
+				E7BCA6D4208593A171456E18 /* Pods */,
+				E8687A1A98CEB422EA139890 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +91,9 @@
 		5966D22C1D11512E0059F286 /* TKHomework */ = {
 			isa = PBXGroup;
 			children = (
+				5966D24D1D1157870059F286 /* ViewController */,
+				5966D24E1D1157AC0059F286 /* Utilities */,
 				5966D22D1D11512E0059F286 /* AppDelegate.swift */,
-				5966D22F1D11512E0059F286 /* ViewController.swift */,
 				5966D2311D11512E0059F286 /* Main.storyboard */,
 				5966D2341D11512E0059F286 /* Assets.xcassets */,
 				5966D2361D11512E0059F286 /* LaunchScreen.storyboard */,
@@ -96,6 +111,42 @@
 			path = TKHomeworkTests;
 			sourceTree = "<group>";
 		};
+		5966D24D1D1157870059F286 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5966D24F1D1157DC0059F286 /* TKViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5966D24E1D1157AC0059F286 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5966D2511D1157F40059F286 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E7BCA6D4208593A171456E18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78AF436D79A55AA61CB9A4B5 /* Pods-TKHomework.debug.xcconfig */,
+				072E2579CDE5CBC539201EF6 /* Pods-TKHomework.release.xcconfig */,
+				C3BB71B48030BE1D04AA704A /* Pods-TKHomeworkTests.debug.xcconfig */,
+				24925D151CCE88A0F2F147DC /* Pods-TKHomeworkTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E8687A1A98CEB422EA139890 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69BA828566A1D224D76C48E6 /* Pods_TKHomework.framework */,
+				B6A1A56C9A0D4C70C2E035E5 /* Pods_TKHomeworkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5966D2471D11512E0059F286 /* Build configuration list for PBXNativeTarget "TKHomework" */;
 			buildPhases = (
+				988607A75FE5B4B2963E5743 /* 📦 Check Pods Manifest.lock */,
 				5966D2261D11512D0059F286 /* Sources */,
 				5966D2271D11512D0059F286 /* Frameworks */,
 				5966D2281D11512D0059F286 /* Resources */,
+				E40D6CA2ACA69D7256D8783D /* 📦 Embed Pods Frameworks */,
+				97C09A04CBB0B8F945B1E6A2 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5966D24A1D11512E0059F286 /* Build configuration list for PBXNativeTarget "TKHomeworkTests" */;
 			buildPhases = (
+				96EE7F7D73A50301EC89D73E /* 📦 Check Pods Manifest.lock */,
 				5966D23A1D11512E0059F286 /* Sources */,
 				5966D23B1D11512E0059F286 /* Frameworks */,
 				5966D23C1D11512E0059F286 /* Resources */,
+				550EFE926E51368FD36C7CFF /* 📦 Embed Pods Frameworks */,
+				DFC397C971968CB84881B28C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,13 +249,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		550EFE926E51368FD36C7CFF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKHomeworkTests/Pods-TKHomeworkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96EE7F7D73A50301EC89D73E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97C09A04CBB0B8F945B1E6A2 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKHomework/Pods-TKHomework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		988607A75FE5B4B2963E5743 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC397C971968CB84881B28C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKHomeworkTests/Pods-TKHomeworkTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E40D6CA2ACA69D7256D8783D /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKHomework/Pods-TKHomework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5966D2261D11512D0059F286 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5966D2301D11512E0059F286 /* ViewController.swift in Sources */,
 				5966D22E1D11512E0059F286 /* AppDelegate.swift in Sources */,
+				5966D2501D1157DC0059F286 /* TKViewController.swift in Sources */,
+				5966D2521D1157F40059F286 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +476,7 @@
 		};
 		5966D2481D11512E0059F286 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78AF436D79A55AA61CB9A4B5 /* Pods-TKHomework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TKHomework/Info.plist;
@@ -337,6 +489,7 @@
 		};
 		5966D2491D11512E0059F286 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 072E2579CDE5CBC539201EF6 /* Pods-TKHomework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TKHomework/Info.plist;
@@ -349,6 +502,7 @@
 		};
 		5966D24B1D11512E0059F286 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3BB71B48030BE1D04AA704A /* Pods-TKHomeworkTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TKHomeworkTests/Info.plist;
@@ -361,6 +515,7 @@
 		};
 		5966D24C1D11512E0059F286 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24925D151CCE88A0F2F147DC /* Pods-TKHomeworkTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TKHomeworkTests/Info.plist;
