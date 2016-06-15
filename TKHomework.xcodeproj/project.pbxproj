@@ -15,6 +15,7 @@
 		5966D2431D11512E0059F286 /* TKHomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D2421D11512E0059F286 /* TKHomeworkTests.swift */; };
 		5966D2501D1157DC0059F286 /* TKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D24F1D1157DC0059F286 /* TKViewController.swift */; };
 		5966D2521D1157F40059F286 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D2511D1157F40059F286 /* Constants.swift */; };
+		5984169F1D11F1EA00404289 /* MapFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984169E1D11F1EA00404289 /* MapFunction.swift */; };
 		B53D258005277067F504BB48 /* Pods_TKHomeworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A1A56C9A0D4C70C2E035E5 /* Pods_TKHomeworkTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		5966D2441D11512E0059F286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5966D24F1D1157DC0059F286 /* TKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKViewController.swift; sourceTree = "<group>"; };
 		5966D2511D1157F40059F286 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5984169E1D11F1EA00404289 /* MapFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFunction.swift; sourceTree = "<group>"; };
 		69BA828566A1D224D76C48E6 /* Pods_TKHomework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKHomework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AF436D79A55AA61CB9A4B5 /* Pods-TKHomework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKHomework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKHomework/Pods-TKHomework.debug.xcconfig"; sourceTree = "<group>"; };
 		B6A1A56C9A0D4C70C2E035E5 /* Pods_TKHomeworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKHomeworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 		5966D24E1D1157AC0059F286 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				5984169E1D11F1EA00404289 /* MapFunction.swift */,
 				5966D2511D1157F40059F286 /* Constants.swift */,
 			);
 			path = Utilities;
@@ -347,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5984169F1D11F1EA00404289 /* MapFunction.swift in Sources */,
 				5966D22E1D11512E0059F286 /* AppDelegate.swift in Sources */,
 				5966D2501D1157DC0059F286 /* TKViewController.swift in Sources */,
 				5966D2521D1157F40059F286 /* Constants.swift in Sources */,

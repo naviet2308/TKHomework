@@ -13,10 +13,16 @@ class TKViewController: UIViewController {
     
     @IBOutlet weak var mapView  : GMSMapView!
     @IBOutlet weak var fromInput: UITextField!
+    @IBOutlet weak var toInput  : UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     var searchResults    = [String]()
     var currentTextfield = UITextField()
+    var mapFunction      = MapFunction()
+    
+    var fromMarker       : GMSMarker?
+    var toMarker         : GMSMarker?
+    var routePolyline    : GMSPolyline?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +38,7 @@ class TKViewController: UIViewController {
         
         // add event EditingChanged for textField
         fromInput.addTarget(self, action: #selector(TKViewController.textFieldDidChange(_:)), forControlEvents: UIControlEvents.EditingChanged)
-        fromInput.delegate = self
-        
+        toInput.addTarget(self, action: #selector(TKViewController.textFieldDidChange(_:)), forControlEvents: UIControlEvents.EditingChanged)
     }
     
     // handle event EditingChanged
@@ -74,18 +79,56 @@ class TKViewController: UIViewController {
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             
             let position = CLLocationCoordinate2DMake(lat, lon)
-            let marker = GMSMarker(position: position)
             
-            let camera = GMSCameraPosition.cameraWithLatitude(lat, longitude: lon, zoom: 14)
-            self.mapView.camera = camera
+            if self.currentTextfield == self.fromInput {
+                self.fromMarker            = GMSMarker(position: position)
+                self.fromMarker!.draggable = true
+                self.fromMarker!.title     = "Address : \(title)"
+                self.fromMarker!.map       = self.mapView
+            } else if self.currentTextfield == self.toInput {
+                self.fromMarker!.draggable = true
+                self.toMarker              = GMSMarker(position: position)
+                self.toMarker!.title       = "Address : \(title)"
+                self.toMarker!.map         = self.mapView
+            }
             
-            marker.title = "Address : \(title)"
-            marker.map = self.mapView
-            
-            print("Ahihi :: \(lat) \n Longitude :: \(lon)")
-            
+            if let fromMarker = self.fromMarker, toMarker = self.toMarker {
+                self.recreateRoute()
+                let bounds = GMSCoordinateBounds(coordinate: fromMarker.position, coordinate: toMarker.position)
+                self.mapView.animateWithCameraUpdate(GMSCameraUpdate.fitBounds(bounds))
+                
+            } else {
+                let camera = GMSCameraPosition.cameraWithLatitude(lat, longitude: lon, zoom: 14)
+                self.mapView.camera = camera
+            }
         }
-        
+    }
+    
+    func recreateRoute() {
+        if let _ = routePolyline {
+            clearRoute()
+        }
+        mapFunction.getDirections("\(fromMarker!.position.latitude),\(fromMarker!.position.longitude)", destination: "\(toMarker!.position.latitude),\(toMarker!.position.longitude)", waypoints: nil, travelMode: nil, completionHandler: { (status, success) -> Void in
+            
+            if success {
+                self.drawRoute()
+            }
+            else {
+                print(status)
+            }
+        })
+    }
+    
+    func drawRoute() {
+        let route = mapFunction.overviewPolyline["points"] as! String
+        let path: GMSPath  = GMSPath(fromEncodedPath: route)!
+        routePolyline      = GMSPolyline(path: path)
+        routePolyline!.map = mapView
+    }
+    
+    func clearRoute() {
+        routePolyline!.map = nil
+        routePolyline      = nil
     }
 }
 
@@ -102,6 +145,14 @@ extension TKViewController: GMSMapViewDelegate {
     func mapView(mapView: GMSMapView, didChangeCameraPosition position: GMSCameraPosition) {
         currentTextfield.resignFirstResponder()
         currentTextfield.endEditing(true)
+    }
+    
+    func mapView(mapView: GMSMapView, didEndDraggingMarker marker: GMSMarker) {
+        self.recreateRoute()
+        if let fromMarker = self.fromMarker, toMarker = self.toMarker {
+            let bounds = GMSCoordinateBounds(coordinate: fromMarker.position, coordinate: toMarker.position)
+            self.mapView.animateWithCameraUpdate(GMSCameraUpdate.fitBounds(bounds))
+        }
     }
 }
 
