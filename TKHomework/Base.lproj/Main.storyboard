@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -21,17 +22,47 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X6r-pi-gFM">
+                                <rect key="frame" x="0.0" y="80" width="600" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="VLJ-5H-5DN"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sbL-wb-nKm"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZuJ-Xj-I2K">
+                                <rect key="frame" x="150" y="36" width="300" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.4001266891891892" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="En8-Gv-Mru"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="RSc-xs-R6b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4e8-b0-Ko7"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="noJ-UM-216" secondAttribute="bottom" id="LgK-vy-VdV"/>
+                            <constraint firstItem="ZuJ-Xj-I2K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mvq-8Z-U8o"/>
+                            <constraint firstItem="ZuJ-Xj-I2K" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="Mxx-WT-lA3"/>
                             <constraint firstAttribute="trailing" secondItem="noJ-UM-216" secondAttribute="trailing" id="Q2H-rh-F5Y"/>
                             <constraint firstItem="noJ-UM-216" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="a0S-JX-mf3"/>
+                            <constraint firstItem="ZuJ-Xj-I2K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="cbU-6M-kin"/>
+                            <constraint firstItem="X6r-pi-gFM" firstAttribute="top" secondItem="ZuJ-Xj-I2K" secondAttribute="bottom" constant="4" id="ccU-P6-BDs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X6r-pi-gFM" secondAttribute="bottom" id="m3B-og-5mX"/>
                             <constraint firstItem="noJ-UM-216" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mXA-cF-l9L"/>
+                            <constraint firstAttribute="trailing" secondItem="X6r-pi-gFM" secondAttribute="trailing" id="nKe-n2-z5h"/>
+                            <constraint firstItem="X6r-pi-gFM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yD4-nd-ubt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fromInput" destination="ZuJ-Xj-I2K" id="uvP-jg-Lfi"/>
                         <outlet property="mapView" destination="noJ-UM-216" id="tqk-8c-LMl"/>
+                        <outlet property="tableView" destination="X6r-pi-gFM" id="KxK-4O-kvZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
