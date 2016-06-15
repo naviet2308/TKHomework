@@ -40,7 +40,7 @@ class MapFunction {
                     
                     do {
                         let dictionary: Dictionary<NSObject, AnyObject> = try NSJSONSerialization.JSONObjectWithData(directionsData!, options: NSJSONReadingOptions.MutableContainers) as! Dictionary<NSObject, AnyObject>
-                        debugPrint(dictionary)
+                        //debugPrint(dictionary)
                         
                         let status = dictionary["status"] as! String
                         

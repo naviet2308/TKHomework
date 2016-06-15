@@ -81,15 +81,23 @@ class TKViewController: UIViewController {
             let position = CLLocationCoordinate2DMake(lat, lon)
             
             if self.currentTextfield == self.fromInput {
-                self.fromMarker            = GMSMarker(position: position)
+                //self.fromMarker            = nil
+                if self.fromMarker == nil {
+                    self.fromMarker = GMSMarker(position: position)
+                }
+                self.fromMarker?.position  = position
                 self.fromMarker!.draggable = true
                 self.fromMarker!.title     = "Address : \(title)"
                 self.fromMarker!.map       = self.mapView
             } else if self.currentTextfield == self.toInput {
-                self.fromMarker!.draggable = true
-                self.toMarker              = GMSMarker(position: position)
-                self.toMarker!.title       = "Address : \(title)"
-                self.toMarker!.map         = self.mapView
+                if self.toMarker == nil {
+                    self.toMarker = GMSMarker(position: position)
+                }
+                //self.toMarker            = nil
+                self.toMarker?.position  = position
+                self.toMarker!.draggable = true
+                self.toMarker!.title     = "Address : \(title)"
+                self.toMarker!.map       = self.mapView
             }
             
             if let fromMarker = self.fromMarker, toMarker = self.toMarker {
