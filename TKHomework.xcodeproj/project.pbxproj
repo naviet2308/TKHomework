@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5966D22E1D11512E0059F286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D22D1D11512E0059F286 /* AppDelegate.swift */; };
+		5966D2301D11512E0059F286 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D22F1D11512E0059F286 /* ViewController.swift */; };
+		5966D2331D11512E0059F286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5966D2311D11512E0059F286 /* Main.storyboard */; };
+		5966D2351D11512E0059F286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5966D2341D11512E0059F286 /* Assets.xcassets */; };
+		5966D2381D11512E0059F286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5966D2361D11512E0059F286 /* LaunchScreen.storyboard */; };
+		5966D2431D11512E0059F286 /* TKHomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D2421D11512E0059F286 /* TKHomeworkTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5966D23F1D11512E0059F286 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5966D2221D11512D0059F286 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5966D2291D11512D0059F286;
+			remoteInfo = TKHomework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5966D22A1D11512E0059F286 /* TKHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5966D22D1D11512E0059F286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5966D22F1D11512E0059F286 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5966D2321D11512E0059F286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5966D2341D11512E0059F286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5966D2371D11512E0059F286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5966D2391D11512E0059F286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5966D23E1D11512E0059F286 /* TKHomeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKHomeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5966D2421D11512E0059F286 /* TKHomeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKHomeworkTests.swift; sourceTree = "<group>"; };
+		5966D2441D11512E0059F286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5966D2271D11512D0059F286 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5966D23B1D11512E0059F286 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5966D2211D11512D0059F286 = {
+			isa = PBXGroup;
+			children = (
+				5966D22C1D11512E0059F286 /* TKHomework */,
+				5966D2411D11512E0059F286 /* TKHomeworkTests */,
+				5966D22B1D11512E0059F286 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5966D22B1D11512E0059F286 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5966D22A1D11512E0059F286 /* TKHomework.app */,
+				5966D23E1D11512E0059F286 /* TKHomeworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5966D22C1D11512E0059F286 /* TKHomework */ = {
+			isa = PBXGroup;
+			children = (
+				5966D22D1D11512E0059F286 /* AppDelegate.swift */,
+				5966D22F1D11512E0059F286 /* ViewController.swift */,
+				5966D2311D11512E0059F286 /* Main.storyboard */,
+				5966D2341D11512E0059F286 /* Assets.xcassets */,
+				5966D2361D11512E0059F286 /* LaunchScreen.storyboard */,
+				5966D2391D11512E0059F286 /* Info.plist */,
+			);
+			path = TKHomework;
+			sourceTree = "<group>";
+		};
+		5966D2411D11512E0059F286 /* TKHomeworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				5966D2421D11512E0059F286 /* TKHomeworkTests.swift */,
+				5966D2441D11512E0059F286 /* Info.plist */,
+			);
+			path = TKHomeworkTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5966D2291D11512D0059F286 /* TKHomework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5966D2471D11512E0059F286 /* Build configuration list for PBXNativeTarget "TKHomework" */;
+			buildPhases = (
+				5966D2261D11512D0059F286 /* Sources */,
+				5966D2271D11512D0059F286 /* Frameworks */,
+				5966D2281D11512D0059F286 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TKHomework;
+			productName = TKHomework;
+			productReference = 5966D22A1D11512E0059F286 /* TKHomework.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5966D23D1D11512E0059F286 /* TKHomeworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5966D24A1D11512E0059F286 /* Build configuration list for PBXNativeTarget "TKHomeworkTests" */;
+			buildPhases = (
+				5966D23A1D11512E0059F286 /* Sources */,
+				5966D23B1D11512E0059F286 /* Frameworks */,
+				5966D23C1D11512E0059F286 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5966D2401D11512E0059F286 /* PBXTargetDependency */,
+			);
+			name = TKHomeworkTests;
+			productName = TKHomeworkTests;
+			productReference = 5966D23E1D11512E0059F286 /* TKHomeworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5966D2221D11512D0059F286 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Nguyen Anh Viet";
+				TargetAttributes = {
+					5966D2291D11512D0059F286 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					5966D23D1D11512E0059F286 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5966D2291D11512D0059F286;
+					};
+				};
+			};
+			buildConfigurationList = 5966D2251D11512D0059F286 /* Build configuration list for PBXProject "TKHomework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5966D2211D11512D0059F286;
+			productRefGroup = 5966D22B1D11512E0059F286 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5966D2291D11512D0059F286 /* TKHomework */,
+				5966D23D1D11512E0059F286 /* TKHomeworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5966D2281D11512D0059F286 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5966D2381D11512E0059F286 /* LaunchScreen.storyboard in Resources */,
+				5966D2351D11512E0059F286 /* Assets.xcassets in Resources */,
+				5966D2331D11512E0059F286 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5966D23C1D11512E0059F286 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5966D2261D11512D0059F286 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5966D2301D11512E0059F286 /* ViewController.swift in Sources */,
+				5966D22E1D11512E0059F286 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5966D23A1D11512E0059F286 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5966D2431D11512E0059F286 /* TKHomeworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5966D2401D11512E0059F286 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5966D2291D11512D0059F286 /* TKHomework */;
+			targetProxy = 5966D23F1D11512E0059F286 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5966D2311D11512E0059F286 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5966D2321D11512E0059F286 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5966D2361D11512E0059F286 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5966D2371D11512E0059F286 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5966D2451D11512E0059F286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5966D2461D11512E0059F286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5966D2481D11512E0059F286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TKHomework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.129.TKHomework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5966D2491D11512E0059F286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TKHomework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.129.TKHomework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5966D24B1D11512E0059F286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TKHomeworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.129.TKHomeworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TKHomework.app/TKHomework";
+			};
+			name = Debug;
+		};
+		5966D24C1D11512E0059F286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TKHomeworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.129.TKHomeworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TKHomework.app/TKHomework";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5966D2251D11512D0059F286 /* Build configuration list for PBXProject "TKHomework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5966D2451D11512E0059F286 /* Debug */,
+				5966D2461D11512E0059F286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5966D2471D11512E0059F286 /* Build configuration list for PBXNativeTarget "TKHomework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5966D2481D11512E0059F286 /* Debug */,
+				5966D2491D11512E0059F286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5966D24A1D11512E0059F286 /* Build configuration list for PBXNativeTarget "TKHomeworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5966D24B1D11512E0059F286 /* Debug */,
+				5966D24C1D11512E0059F286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5966D2221D11512D0059F286 /* Project object */;
+}
