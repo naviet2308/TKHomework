@@ -71,4 +71,26 @@ class MapFunction {
             completionHandler(address: "", success: false)
         }
     }
+    
+    func getLatLng(address: String, completionHandler: ((position: CLLocationCoordinate2D?, success: Bool) -> Void)) {
+        
+        let url = NSURL(string: "\(baseURLGeocoding)address=\(address)&sensor=false")
+
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
+            do {
+                if data != nil{
+                    let dic = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableLeaves) as! NSDictionary
+                    
+                    let lat = dic["results"]?.valueForKey("geometry")?.valueForKey("location")?.valueForKey("lat")?.objectAtIndex(0) as! Double
+                    let lon = dic["results"]?.valueForKey("geometry")?.valueForKey("location")?.valueForKey("lng")?.objectAtIndex(0) as! Double
+                    completionHandler(position: CLLocationCoordinate2D(latitude: lat,longitude: lon), success: true)
+                }
+                
+            }catch {
+                completionHandler(position: nil, success: false)
+            }
+        }
+        task.resume()
+
+    }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 // Key
-let GMS_KEY      = "AIzaSyDTkz3jCicRm60pAUvINQ2vbY8jnneNXP4"
+let GMS_KEY       = "AIzaSyDTkz3jCicRm60pAUvINQ2vbY8jnneNXP4"
 let GEOCODING_KEY = "AIzaSyBTejCyfd1j17hxLMrwsGB84E6uTU6lBJg"
 
 // Color

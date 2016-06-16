@@ -81,7 +81,6 @@ class TKViewController: UIViewController {
             let position = CLLocationCoordinate2DMake(lat, lon)
             
             if self.currentTextfield == self.fromInput {
-                //self.fromMarker            = nil
                 if self.fromMarker == nil {
                     self.fromMarker = GMSMarker(position: position)
                 }
@@ -93,7 +92,6 @@ class TKViewController: UIViewController {
                 if self.toMarker == nil {
                     self.toMarker = GMSMarker(position: position)
                 }
-                //self.toMarker            = nil
                 self.toMarker?.position  = position
                 self.toMarker!.draggable = true
                 self.toMarker!.title     = "Address : \(title)"
@@ -104,7 +102,6 @@ class TKViewController: UIViewController {
                 self.recreateRoute()
                 let bounds = GMSCoordinateBounds(coordinate: fromMarker.position, coordinate: toMarker.position)
                 self.mapView.animateWithCameraUpdate(GMSCameraUpdate.fitBounds(bounds))
-                
             } else {
                 let camera = GMSCameraPosition.cameraWithLatitude(lat, longitude: lon, zoom: 14)
                 self.mapView.camera = camera
@@ -114,7 +111,8 @@ class TKViewController: UIViewController {
     
     func recreateRoute() {
         if let _ = routePolyline {
-            clearRoute()
+            routePolyline!.map = nil
+            routePolyline      = nil
         }
         mapFunction.getDirections("\(fromMarker!.position.latitude),\(fromMarker!.position.longitude)", destination: "\(toMarker!.position.latitude),\(toMarker!.position.longitude)", travelMode: nil, completionHandler: { (status, success) -> Void in
             
@@ -132,11 +130,6 @@ class TKViewController: UIViewController {
         let path: GMSPath  = GMSPath(fromEncodedPath: route)!
         routePolyline      = GMSPolyline(path: path)
         routePolyline!.map = mapView
-    }
-    
-    func clearRoute() {
-        routePolyline!.map = nil
-        routePolyline      = nil
     }
 }
 
@@ -157,9 +150,12 @@ extension TKViewController: GMSMapViewDelegate {
     
     func mapView(mapView: GMSMapView, didEndDraggingMarker marker: GMSMarker) {
         mapFunction.getAddress(String(marker.position.latitude), longitude: String(marker.position.longitude)) { (address, success) in
+            if !success {
+                return
+            }
             if marker == self.fromMarker {
                 self.fromInput.text = address
-            } else if marker == self.toMarker{
+            } else if marker == self.toMarker {
                 self.toInput.text = address
             }
         }
@@ -175,7 +171,6 @@ extension TKViewController: GMSMapViewDelegate {
 //MARK: - UITableViewDataSource
 extension TKViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
         return 1
     }
     
@@ -195,8 +190,7 @@ extension TKViewController: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension TKViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView,
-                   didSelectRowAtIndexPath indexPath: NSIndexPath){
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         
         tableView.hidden = true
         currentTextfield.text = searchResults[indexPath.row]
@@ -204,23 +198,14 @@ extension TKViewController: UITableViewDelegate {
         
         self.dismissViewControllerAnimated(true, completion: nil)
         let correctedAddress:String! = self.searchResults[indexPath.row].stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.symbolCharacterSet())
-        let url = NSURL(string: "https://maps.googleapis.com/maps/api/geocode/json?address=\(correctedAddress)&sensor=false")
-        
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
-            do {
-                if data != nil{
-                    let dic = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableLeaves) as! NSDictionary
-                    
-                    let lat = dic["results"]?.valueForKey("geometry")?.valueForKey("location")?.valueForKey("lat")?.objectAtIndex(0) as! Double
-                    let lon = dic["results"]?.valueForKey("geometry")?.valueForKey("location")?.valueForKey("lng")?.objectAtIndex(0) as! Double
-                    self.locateWithLongitude(lon, andLatitude: lat, andTitle: self.searchResults[indexPath.row])
-                }
-                
-            }catch {
-                print("Error")
+        mapFunction.getLatLng(correctedAddress) { (position, success) in
+            if !success {
+                return
+            }
+            if let position = position {
+                self.locateWithLongitude(position.longitude, andLatitude: position.latitude, andTitle: self.searchResults[indexPath.row])
             }
         }
-        task.resume()
     }
     
 }
