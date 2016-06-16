@@ -116,7 +116,7 @@ class TKViewController: UIViewController {
         if let _ = routePolyline {
             clearRoute()
         }
-        mapFunction.getDirections("\(fromMarker!.position.latitude),\(fromMarker!.position.longitude)", destination: "\(toMarker!.position.latitude),\(toMarker!.position.longitude)", waypoints: nil, travelMode: nil, completionHandler: { (status, success) -> Void in
+        mapFunction.getDirections("\(fromMarker!.position.latitude),\(fromMarker!.position.longitude)", destination: "\(toMarker!.position.latitude),\(toMarker!.position.longitude)", travelMode: nil, completionHandler: { (status, success) -> Void in
             
             if success {
                 self.drawRoute()
@@ -156,12 +156,20 @@ extension TKViewController: GMSMapViewDelegate {
     }
     
     func mapView(mapView: GMSMapView, didEndDraggingMarker marker: GMSMarker) {
-        self.recreateRoute()
+        mapFunction.getAddress(String(marker.position.latitude), longitude: String(marker.position.longitude)) { (address, success) in
+            if marker == self.fromMarker {
+                self.fromInput.text = address
+            } else if marker == self.toMarker{
+                self.toInput.text = address
+            }
+        }
         if let fromMarker = self.fromMarker, toMarker = self.toMarker {
+            self.recreateRoute()
             let bounds = GMSCoordinateBounds(coordinate: fromMarker.position, coordinate: toMarker.position)
             self.mapView.animateWithCameraUpdate(GMSCameraUpdate.fitBounds(bounds))
         }
     }
+    
 }
 
 //MARK: - UITableViewDataSource
