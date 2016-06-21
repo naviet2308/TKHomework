@@ -11,10 +11,10 @@ import GoogleMaps
 
 class MapFunction {
     
-    let baseURLDirections = "https://maps.googleapis.com/maps/api/directions/json?"
-    let baseURLGeocoding  = "https://maps.googleapis.com/maps/api/geocode/json?"
+    private let baseURLDirections = "https://maps.googleapis.com/maps/api/directions/json?"
+    private let baseURLGeocoding  = "https://maps.googleapis.com/maps/api/geocode/json?"
     
-    var selectedRoute           : Dictionary<NSObject, AnyObject>!
+    private var selectedRoute   : Dictionary<NSObject, AnyObject>!
     var overviewPolyline        : Dictionary<NSObject, AnyObject>!
     
     func getDirections(origin: String!, destination: String!, travelMode: AnyObject!, completionHandler: ((status: String, success: Bool) -> Void)) {

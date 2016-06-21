@@ -11,6 +11,7 @@ target 'TKHomework' do
   target 'TKHomeworkTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'GoogleMaps'
   end
 
 end

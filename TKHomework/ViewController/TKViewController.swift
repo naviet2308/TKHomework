@@ -16,13 +16,13 @@ class TKViewController: UIViewController {
     @IBOutlet weak var toInput  : UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    var searchResults    = [String]()
-    var currentTextfield = UITextField()
-    var mapFunction      = MapFunction()
+    private var searchResults    = [String]()
+    private var currentTextfield = UITextField()
+    private var mapFunction      = MapFunction()
     
-    var fromMarker       : GMSMarker?
-    var toMarker         : GMSMarker?
-    var routePolyline    : GMSPolyline?
+    private var fromMarker       : GMSMarker?
+    private var toMarker         : GMSMarker?
+    private var routePolyline    : GMSPolyline?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +48,10 @@ class TKViewController: UIViewController {
         self.searchResults.removeAll()
         filter.type = .Address
         filter.country = "vn"
-        if let searchText = textField.text where !textField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).isEmpty{
-            placeClient.autocompleteQuery(searchText, bounds: nil, filter: filter) { (results, error: NSError?) -> Void in
+        let characterSet = NSCharacterSet.whitespaceCharacterSet()
+        let searchInput  = textField.text!.stringByTrimmingCharactersInSet(characterSet)
+        if checkValidInput(searchInput) {
+            placeClient.autocompleteQuery(searchInput, bounds: nil, filter: filter) { (results, error: NSError?) -> Void in
                 
                 guard error == nil else {
                     print("Autocomplete error \(error)")
@@ -71,6 +73,23 @@ class TKViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func checkValidInput(input : String) -> Bool {
+        if !input.isEmpty {
+            
+            /* Pattern for check Address if need */
+            //            let regex = ""
+            //            do {
+            //                let regex = try NSRegularExpression(pattern: regex, options: .CaseInsensitive)
+            //                return regex.firstMatchInString(input, options: NSMatchingOptions(rawValue: 0), range: NSMakeRange(0, input.characters.count)) != nil
+            //            } catch {
+            //                return false
+            //            }
+            
+            return true
+        }
+        return false
     }
     
     // show marker
